@@ -9,7 +9,7 @@ client.on('ready', () => {
 });
 
 client.on('guildMemberAdd', function(member){
-    member.addRole('559395818139025408').then(.catch(console.error))
+    member.addRole('559395818139025408').then(catch(console.error))
     member.createDM().then(function (channel){
         return channel.send('Bienvenue ' + member.displayName + ' sur notre serveur nous te shouhaitons une bonne journée/soirée et merci de lire le règlement.:) ')
     }).catch(console.error)
