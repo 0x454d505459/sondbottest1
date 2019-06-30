@@ -14,7 +14,7 @@ client.on('guildMemberAdd', function(member){
         return channel.send('Bienvenue ' + member.displayName + ' sur notre serveur nous te shouhaitons une bonne journée/soirée et merci de lire le règlement.:) ')
     }).catch(console.error)
 
-}).catch(console.error);
+}).catch(console.error)
 
 //commands
 client.on('message', message => {
