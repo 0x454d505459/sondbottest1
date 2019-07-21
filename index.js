@@ -126,7 +126,7 @@ client.on('message', message => {
 			message.delete()
 			var embed = new Discord.RichEmbed()
 			.addField(`@everyone, merci de lire la dernière annonce postée par ${message.author}`, "Show avatars for the bot", true)
-			
+			message.channel.send(embed)
 		}
 	}
 
