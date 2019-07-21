@@ -125,7 +125,7 @@ client.on('message', message => {
 			let args = message.content.split(" ").slice(1);
 			message.delete()
 			message.channel.send(`@everyone, merci de lire la dernière annonce postée par ${message.author}`)
-			message.channel.send("`args.join()`")
+			message.channel.send(` + args.join() + `)
 			
 		}
 	}
