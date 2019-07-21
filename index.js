@@ -124,7 +124,9 @@ client.on('message', message => {
 		if(!message.member.hasPermission("MENTION_EVERYONE")) {return message.channel.send("Missing permission: MENTION_EVERYONE")} {
 			let args = message.content.split(" ").slice(1);
 			message.delete()
-			message.channel.send(`@everyone ${message.author} à poster une nouvelle annonce vite lis la !!!` + args.join())
+			var embed = new Discord.RichEmbed()
+			.addField(`@everyone, merci de lire la dernière annonce postée par ${message.author}`, "Show avatars for the bot", true)
+			
 		}
 	}
 
