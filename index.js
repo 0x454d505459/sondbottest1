@@ -123,6 +123,7 @@ client.on('message', message => {
 	if(message.content.startsWith(prefix + "!")) {
 		if(!message.member.hasPermission("MENTION_EVERYONE")) {return message.channel.send("Missing permission: MENTION_EVERYONE")} {
 			let args = message.content.split(" ").slice(1);
+			message.delete()
 			message.channel.send(`@everyone ${message.author} à poster une nouvelle annonce vite lis la !!!` + args.join())
 		}
 	}
