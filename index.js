@@ -5,6 +5,7 @@ client.login(process.env.TOKEN)
 var prefix = ("/");
 var adminprfix= ("//")
 client.on('ready', () => {
+  client.user.setPresence({ game: { name: "/help pour les commandes :)"}, status: 'online' })
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
@@ -137,7 +138,9 @@ client.on('message', message => {
 		//console.log("this server has ", message.guild.memberCount, "member(s)")
 		message.channel.send("data recived by console")
 	}
-
+	if(message.content === prefix + "invite"){
+		message.channel.send("Voici le liens qui vous permettra de m'inviter: https://discordapp.com/api/oauth2/authorize?client_id=560879666169249792&permissions=8&scope=bot")
+	}
 	
 
 	if(message.content === adminprfix + "help"){
