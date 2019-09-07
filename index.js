@@ -1,7 +1,7 @@
 //setup
 const Discord = require("discord.js");
 var client = new Discord.Client()
-client.login(process.env.TOKEN)
+client.login(process.env.PERSTOKEN)
 var prefix = ("/");
 var adminprfix= ("//")
 client.on('ready', () => {
@@ -9,12 +9,12 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('guildMemberAdd', function(member){
-    member.createDM().then(function (channel){
-        return channel.send('Bienvenue ' + member.displayName + ' sur notre serveur nous te shouhaitons une bonne journée/soirée et merci de lire le règlement.:) ')
-    }).catch(console.error)
+//client.on('guildMemberAdd', function(member){
+   // member.createDM().then(function (channel){
+        //return channel.send('Bienvenue ' + member.displayName + ' sur notre serveur nous te shouhaitons une bonne journée/soirée et merci de lire le règlement.:) ')
+    //}).catch(console.error)
 
-});
+//});
 
 //commands
 client.on('message', message => {
