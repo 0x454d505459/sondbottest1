@@ -70,8 +70,8 @@ client.on('message', message => {
 		.addField(args.join(" "), "REACT with :white_check_mark: or :x:")
 		.setTimestamp()
 	message.channel.send(embed)
-		message.react(":white_check_mark:")
-		message.react(":x:")
+		message.channel.react(":white_check_mark:")
+		message.channel.react(":x:")
 	}
 
 	
