@@ -1,7 +1,7 @@
 //setup
 const Discord = require("discord.js");
 var client = new Discord.Client()
-client.login(process.env.TOKEN)
+client.login(process.env.PERSTOKEN)
 var prefix = ("/");
 var adminprfix= ("//")
 client.on('ready', () => {
