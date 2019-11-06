@@ -1,7 +1,7 @@
 //setup
 const Discord = require("discord.js");
 var client = new Discord.Client()
-client.login(process.env.TOKEN)
+client.login("NTYwODc5NjY2MTY5MjQ5Nzky.XO_Whg.-TS7hSlJxx350220eLRmGYWOVpA")
 var prefix = ("/");
 var adminprfix= ("//")
 client.on('ready', () => {
@@ -121,6 +121,26 @@ client.on('message', message => {
 		}
 	}
 
+
+	if(message.content.startsWith(prefix + "yt")){
+		let args = message.content.split(" ").slice(1)
+		if(message.member.voiceChannel){
+			message.member.voiceChannel.join()
+			.then(connection => {
+				message.reply("Connection réussi")
+				connection.playArbitraryInput("https://www.youtube.com/watch?v=MEkaqZecpUQ")
+				
+			})
+			.catch(console.log);
+
+
+		} else {
+			message.reply("Vous devez d'abord vous connecter a un salon audio");
+		}
+	}
+
+	
+
 	if(message.content.startsWith(prefix + "!")) {
 		if(!message.member.hasPermission("MENTION_EVERYONE")) {return message.channel.send("Missing permission: MENTION_EVERYONE")} {
 			let args = message.content.split(" ").slice(1);
@@ -156,6 +176,10 @@ client.on('message', message => {
 		}
 	}
 })
+
+
+
+
 
 client.on('message', message => {
   // Ignore messages that aren't from a guild
