@@ -58,6 +58,8 @@ client.on('message', message => {
 		.addField("s-info", "show server Informations like the owner of it", true)
 		.addField('say', "say what you write(exemple: if you write /say hello world the bot will say hello world", true)
 		.addField("!", "affiche une annonce", true)
+		.addField("yt", "joue le son d'une video youtube", true)
+		.addField("stop", "stop la musique en cours", true)
 		.setFooter("prefix is " + prefix)
 		.setColor("#FF0000")
 	message.channel.send(embed)
