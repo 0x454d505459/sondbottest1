@@ -153,7 +153,7 @@ client.on('message', message => {
 		if(message.member.voiceChannel){
 			message.member.voiceChannel.join()
 			.then(connection => {
-				message.reply("Connection réussi")
+				message.reply("Joue maintenant: " + args.join())
 				connection.playArbitraryInput(ytdl(args.join()))
 				
 			})
