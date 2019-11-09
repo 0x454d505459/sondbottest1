@@ -1,7 +1,8 @@
 //setup
 const Discord = require("discord.js");
+const ytdl = require("ytdl-core");
 var client = new Discord.Client()
-client.login(process.env.TOKEN)
+client.login("NTYwODc5NjY2MTY5MjQ5Nzky.XcbpHg.IhMz91hrPUYJ1hZbkiAhE-E90Ug")
 var prefix = ("/");
 var adminprfix= ("//")
 client.on('ready', () => {
@@ -9,12 +10,12 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-//client.on('guildMemberAdd', function(member){
-   // member.createDM().then(function (channel){
-        //return channel.send('Bienvenue ' + member.displayName + ' sur notre serveur nous te shouhaitons une bonne journée/soirée et merci de lire le règlement.:) ')
-    //}).catch(console.error)
+client.on('guildMemberAdd', function(member){
+    member.createDM().then(function (channel){
+        return channel.send('Bienvenue ' + member.displayName + ' sur notre serveur nous te shouhaitons une bonne journée/soirée et merci de lire le règlement.:) ')
+    }).catch(console.error)
 
-//});
+});
 
 //commands
 client.on('message', message => {
@@ -92,6 +93,29 @@ client.on('message', message => {
 		message.react('🔴')
 	}
 
+
+	if(message.content === prefix + "stop") {
+
+		if(message.member.voiceChannel){
+
+			if(message.guild.me.voiceChannel) {
+
+				if(message.guild.me.voiceChannelID === message.member.voiceChannelID) {
+					message.channel.send("Un instant, je quite le salon")
+					message.guild.me.voiceChannel.leave()
+				}else {
+					message.channel.send("Vous n'êtes pas connecté au même salon que moi ")
+				}
+
+			}else {
+				message.channel.send("Le bot n'est connecté au aucun salon audio")
+			}
+
+		}else {
+			message.channel.send("Connecte toi su run salon audio stp")
+		}
+	}
+
 	if(message.content.startsWith(adminprfix + "setGame")) {
 		if(message.author.id = "382960284135849984") {
 			let args = message.content.split(" ").slice(1);
@@ -128,14 +152,14 @@ client.on('message', message => {
 			message.member.voiceChannel.join()
 			.then(connection => {
 				message.reply("Connection réussi")
-				connection.playArbitraryInput("https://www.youtube.com/watch?v=MEkaqZecpUQ")
+				connection.playArbitraryInput(ytdl(args.join()))
 				
 			})
 			.catch(console.log);
 
 
 		} else {
-			message.reply("Vous devez d'abord vous connecter à un salon audio");
+			message.reply("Vous devez d'abord vous connecter a un salon audio");
 		}
 	}
 
@@ -222,6 +246,5 @@ client.on('message', message => {
     }
   }
 })
-
 
 
