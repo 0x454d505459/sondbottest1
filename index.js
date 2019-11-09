@@ -2,7 +2,7 @@
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 var client = new Discord.Client()
-client.login("NTYwODc5NjY2MTY5MjQ5Nzky.XcbpHg.IhMz91hrPUYJ1hZbkiAhE-E90Ug")
+client.login(process.env.TOKEN)
 var prefix = ("/");
 var adminprfix= ("//")
 client.on('ready', () => {
