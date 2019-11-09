@@ -39,11 +39,11 @@ client.on('message', message => {
 
 	if(message.content === prefix + "s-info") {
 		var embed = new Discord.RichEmbed()
-		.setDescription("Informations about this server")
-		.addField("Owner", message.guild.owner)
-		.addField("Created at: ", message.guild.createdAt)
-		.addField("Members count: ", message.guild.memberCount)
-		.addField("You joined at: ", message.guild.joinedAt)
+		.setDescription("Informations sur ce serveur")
+		.addField("Createur: ", message.guild.owner)
+		.addField("Créé le: ", message.guild.createdAt)
+		.addField("Nmbre de membres: ", message.guild.memberCount)
+		.addField("Tu là rejoint le: ", message.guild.joinedAt)
 		.setColor("#FF0000")
 	message.channel.send(embed)
 	
