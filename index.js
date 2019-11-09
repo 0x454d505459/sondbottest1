@@ -135,7 +135,7 @@ client.on('message', message => {
 
 
 		} else {
-			message.reply("Vous devez d'abord vous connecter a un salon audio");
+			message.reply("Vous devez d'abord vous connecter à un salon audio");
 		}
 	}
 
