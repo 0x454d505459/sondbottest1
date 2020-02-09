@@ -78,22 +78,8 @@ client.on('message', message => {
 	}
 	
 	if(message.content === prefix + "ok") {
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
-		message.channel.send("ok")
+		message.channel.send("/ok")
+		
 	}
 	
 	if(message.content.startsWith(prefix + "sond")) {
