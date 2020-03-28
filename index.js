@@ -120,15 +120,9 @@ client.on('message', message => {
     
     function anim() {
 
-        message.member.guild.setName('Les').catch(console.error)
-        message.member.guild.setName('Les s').catch(console.error)
-        message.member.guild.setName('Les sa').catch(console.error)
-        message.member.guild.setName('Les sar').catch(console.error)
-        message.member.guild.setName('Les sard').catch(console.error)
-        message.member.guild.setName('Les sardi').catch(console.error)
-        message.member.guild.setName('Les sardin').catch(console.error)
-        message.member.guild.setName('Les sardine').catch(console.error)
+      
         message.member.guild.setName('Les sardines').catch(console.error)
+	message.member.guild.setName('🐟🐟🐟').catch(console.error)
     }
 	
 	if(message.content === prefix + "animate") {
