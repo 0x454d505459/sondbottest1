@@ -134,7 +134,7 @@ client.on('message', message => {
 	if(message.content === prefix + "animate") {
         	if(!message.member.hasPermission("MANAGE_SERVER")) {return message.channel.send("Permission manquante: MANAGE_SERVER")} {
             
-            inet = setInterval(anim, 50)
+            inet = setInterval(anim, 80)
         }
         
     }
