@@ -132,13 +132,20 @@ client.on('message', message => {
     }
 	
 	if(message.content === prefix + "animate") {
-        if(!message.member.hasPermission("MANAGE_SERVER")) {return message.channel.send("Permission manquante: MANAGE_SERVER")} {
+        	if(!message.member.hasPermission("MANAGE_SERVER")) {return message.channel.send("Permission manquante: MANAGE_SERVER")} {
             
-            setInterval(anim, 50)
+            inet = setInterval(anim, 50)
         }
         
     }
 
+	
+	if(message.content === prefix + "anstop"){
+		if(!message.member.hasPermission("MANAGE_SERVER")) {return message.channel.send("Permission manquante: MANAGE_SERVER")} {
+			clearInterval(inet)
+		}
+	}
+		
 
 	if(message.content === prefix + "stop") {
 
