@@ -1,0 +1,25 @@
+{
+  "name": "sondbottest1",
+  "version": "1.0.0",
+  "description": "Bot Discord déstiner à la base pour faire des sondages mais à cause du fait que la team KYZE sois dissoute il n'est plus beaucoup utilisé.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheFourchette/sondbottest1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheFourchette/sondbottest1/issues"
+  },
+  "homepage": "https://github.com/TheFourchette/sondbottest1#readme",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "node-opus": "^0.3.3",
+    "ytdl-core": "^2.0.1"
+  }
+}
