@@ -1,0 +1,17 @@
+{
+  "name": "sondbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NameUndefined",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.6.3",
+    "node-opus": "^0.3.3",
+    "opusscript": "0.0.6",
+    "ytdl-core": "^1.0.9"
+  }
+}
