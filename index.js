@@ -3,8 +3,9 @@ const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 var client = new Discord.Client()
 client.login(process.env.TOKEN)
-var prefix = ("/");
-var adminprfix= ("//")
+const prefix = ("/");
+const adminprfix= ("//")
+var animated = false
 client.on('ready', () => {
   client.user.setPresence({ game: { name: "/help pour les commandes :)"}, status: 'online' })
   console.log(`Logged in as ${client.user.tag}!`);
@@ -127,8 +128,13 @@ client.on('message', message => {
 	
 	if(message.content === prefix + "animate") {
         	if(!message.member.hasPermission("MANAGE_GUILD")) {return message.channel.send("Permission manquante: MANAGE_SERVER")} {
+            		if(animated == false) {
+				animated = true
+				inet = setInterval(anim, 1500)
+			}else {
+				message.channel.send("L'animation est déjà en cours")
+			}
             
-            inet = setInterval(anim, 1000)
         }
         
     }
