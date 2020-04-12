@@ -27,9 +27,10 @@ client.on('message', message => {
 		if(message.author.id === sus) {
 			message.delete()
 			message.channel.send(args.join(" "))
+			.then().catch(console.error)
 		}else{
 			message.reply("Vous n'étes pas autorisé à afire cela")
-		}.catch(console.error)
+		}
 		
 	}
 	
