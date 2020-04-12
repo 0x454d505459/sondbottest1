@@ -6,7 +6,7 @@ client.login(process.env.TOKEN)
 const prefix = ("/");
 const adminprfix= ("//")
 var animated = false
-var sus = []
+var sus = ["382960284135849984"]
 client.on('ready', () => {
   client.user.setPresence({ game: { name: "/help pour les commandes :)"}, status: 'online' })
   console.log(`Logged in as ${client.user.tag}!`);
@@ -37,7 +37,7 @@ client.on('message', message => {
 	
 	if(message.content.startsWith(adminprfix + "sus-add")) {
 		if(message.author.id === "382960284135849984") {
-			sus.push(args.join(" "))
+			sus.push(args.join())
 			message.channel.send(args.join(" ") + " est maintenant un su.")
 		}else {
 			message.channel.send("Vous n'êtes pas un sudoers")
