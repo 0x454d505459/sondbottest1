@@ -24,7 +24,7 @@ client.on('message', message => {
 	let args = message.content.split(" ").slice(1);
 
 	if(message.content.startsWith(prefix +"say")) {
-		if(message.author.id === sus[]) {
+		if(message.author.id === sus) {
 			message.delete()
 			message.channel.send(args.join(" "))
 		}else{
