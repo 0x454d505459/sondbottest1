@@ -33,13 +33,17 @@ client.on('message', message => {
 		
 	}
 	
-	if(message.content.startsWith(adminprfix + "sus add")) {
+	if(message.content.startsWith(adminprfix + "sus-add")) {
 		if(message.author.id === "382960284135849984") {
 			sus.push(args.join(" "))
-			message.channel.send(args.join(" ") + "est maintenant un su.")
+			message.channel.send(args.join(" ") + " est maintenant un su.")
 		}else {
 			message.channel.send("Vous n'êtes pas un sudoers")
 		}
+	}
+	
+	if(message.content === adminprfix + "sus") {
+		message.channel.send(sus)
 	}
 
 	if(message.content === prefix + 'ping') {
