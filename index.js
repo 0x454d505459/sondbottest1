@@ -6,6 +6,7 @@ client.login(process.env.TOKEN)
 const prefix = ("/");
 const adminprfix= ("//")
 var animated = false
+var sus = []
 client.on('ready', () => {
   client.user.setPresence({ game: { name: "/help pour les commandes :)"}, status: 'online' })
   console.log(`Logged in as ${client.user.tag}!`);
@@ -23,7 +24,7 @@ client.on('message', message => {
 	let args = message.content.split(" ").slice(1);
 
 	if(message.content.startsWith(prefix +"say")) {
-		if(message.author.id === "382960284135849984") {
+		if(message.author.id === sus[]) {
 			message.delete()
 			message.channel.send(args.join(" "))
 		}else{
@@ -31,7 +32,15 @@ client.on('message', message => {
 		}
 		
 	}
-
+	
+	if(message.content.startsWith(adminprfix + "sus add")) {
+		if(message.author.id === "382960284135849984") {
+			sus.push(args.join(" "))
+			message.channel.send(args.join(" ") + "est maintenant un su.")
+		}else {
+			message.channel.send("Vous n'êtes pas un sudoers")
+		}
+	}
 
 	if(message.content === prefix + 'ping') {
 		console.log(message.author)
