@@ -29,10 +29,10 @@ client.on('message', message => {
 			message.channel.send(args.join(" "))
 		}else{
 			message.reply("Vous n'étes pas autorisé à afire cela")
-		}
+		}.catch(console.error)
 		
 	}
-	.catch(console.error)
+	
 	
 	if(message.content.startsWith(adminprfix + "sus-add")) {
 		if(message.author.id === "382960284135849984") {
