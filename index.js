@@ -158,6 +158,7 @@ client.on('message', message => {
 	if(message.content === prefix + "anstop"){
 		if(!message.member.hasPermission("MANAGE_GUILD")) {return message.channel.send("Permission manquante: MANAGE_GUILD")} {
 			clearInterval(inet)
+			animated = false
 		}
 	}
 		
