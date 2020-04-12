@@ -31,8 +31,8 @@ client.on('message', message => {
 			message.reply("Vous n'étes pas autorisé à afire cela")
 		}
 		
-	}.catch(console.error)
-	
+	}
+	.catch(console.error)
 	
 	if(message.content.startsWith(adminprfix + "sus-add")) {
 		if(message.author.id === "382960284135849984") {
@@ -45,7 +45,7 @@ client.on('message', message => {
 	
 	if(message.content === adminprfix + "sus") {
 		message.channel.send(sus)
-	}.catch(console.error)
+	}
 
 	if(message.content === prefix + 'ping') {
 		console.log(message.author)
