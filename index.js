@@ -6,7 +6,7 @@ client.login(process.env.TOKEN)
 const prefix = ("/");
 const adminprfix= ("//")
 var animated = false
-var sus = ["382960284135849984"]
+let sus = ["382960284135849984"]
 client.on('ready', () => {
   client.user.setPresence({ game: { name: "/help pour les commandes :)"}, status: 'online' })
   console.log(`Logged in as ${client.user.tag}!`);
